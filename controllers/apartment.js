@@ -64,7 +64,7 @@ export const deleteApartment = async (req, res, next) => {
         } catch (err) {
             next(err);
         }
-        res.status(200).json("Apartment has been deleted!")
+        res.status(200).json("El apartamento ha sido eliminado!")
     } catch (err) {
         next(err);
     }
