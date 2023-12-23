@@ -6,9 +6,11 @@ import apartmentsRoute from "./routes/apartments.js"
 import usersRoute from "./routes/users.js"
 import lodgingsRoute from "./routes/lodgings.js"
 import cookieParser from "cookie-parser"
+import cors from 'cors'
 
 const app = express()
 dotenv.config()
+app.use(cors());
 
 // Conexion inicial a la base de datos
 const connect = async () => {
