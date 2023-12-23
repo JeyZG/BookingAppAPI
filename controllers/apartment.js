@@ -72,8 +72,9 @@ export const deleteApartment = async (req, res, next) => {
 
 // READ All Apartments
 export const getApartments = async (req, res, next) => {
+    console.log(req.query)
     try {
-        const apartments = await Apartment.find()
+        const apartments = await Apartment.find().filter(req.query)
         res.status(200).json(apartments)
     } catch (err) {
         next(err);
