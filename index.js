@@ -64,6 +64,6 @@ app.listen(process.env.PORT, ()=> {
 app.get("/", (req, res) => {
     res.status(200).json({
         success: true,
-        message: "Happy Hacking! 😎🤟🏽"
+        message: `Happy Hacking! 😎🤟🏽 --> App: ${process.env.APPNAME}`
     })
 })
