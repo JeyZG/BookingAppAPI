@@ -60,3 +60,10 @@ app.listen(process.env.PORT, ()=> {
     connect()
     console.log("Servidor corriendo en puerto " + process.env.PORT);
 })
+
+app.get("/", (req, res) => {
+    res.status(200).json({
+        success: true,
+        message: "Happy Hacking! 😎🤟🏽"
+    })
+})
